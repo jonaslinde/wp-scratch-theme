@@ -1,0 +1,11 @@
+{
+    "name": "root/wp-scratch-theme",
+    "description": "Add description",
+    "authors": [
+        {
+            "name": "Jonas Linde",
+            "email": "jonas.linde@jeelee.se"
+        }
+    ],
+    "require": {}
+}
