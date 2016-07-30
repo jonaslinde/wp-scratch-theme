@@ -20,3 +20,4 @@ install:
 before_script:
 
 script:
+  - echo "hello"
