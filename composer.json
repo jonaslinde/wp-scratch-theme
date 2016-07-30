@@ -1,11 +1,22 @@
 {
-    "name": "root/wp-scratch-theme",
+    "name": "jeelee/wp-scratch-theme",
     "description": "Add description",
-    "authors": [
-        {
-            "name": "Jonas Linde",
-            "email": "jonas.linde@jeelee.se"
+    "authors": [{
+        "name": "Jonas Linde",
+        "email": "jonas.linde@jeelee.se"
+    }],
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "Automattic/_s",
+            "version": "1.0",
+            "dist": {
+                "url": "https://github.com/Automattic/_s/zipball/master",
+                "type": "zip"
+            }
         }
-    ],
-    "require": {}
+    }],
+    "require": {
+        "Automattic/_s": "1.0"
+    }
 }
