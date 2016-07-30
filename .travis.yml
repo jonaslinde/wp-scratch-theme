@@ -1,4 +1,5 @@
 language: php
+
 php:
   - '5.4'
   - '5.5'
@@ -8,6 +9,7 @@ php:
   - nightly
 
 env:
+ - WP_PROJECT_TYPE=theme WP_VERSION=latest WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000 WP_TEST_USER=test WP_TEST_USER_PASS=test
 
 services:
 
@@ -15,9 +17,11 @@ before_install:
 
 install:
   - composer install
+  - git clone https://github.com/Seravo/wordpress-test-template wp-tests
+  - bash wp-tests/bin/install-wp-tests.sh test root '' localhost $WP_VERSION
   - phpenv rehash
 
 before_script:
 
 script:
-  - echo "hello"
+  - cd wp-tests/spec && bundle exec rspec test.rb
